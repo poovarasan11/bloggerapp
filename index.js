@@ -45,6 +45,7 @@ app.get('/auth/failure', (req, res) => {
 
 app.get('/protected', isLoggedIn, (req, res) => {
     // console.log("reqqqq", req.user)
+
     res.send(`Hello ${req.user.displayName}`)
 })
 
